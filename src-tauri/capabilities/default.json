@@ -1,0 +1,19 @@
+{
+  "$schema": "../node_modules/@tauri-apps/cli/schema.json",
+  "identifier": "default",
+  "description": "Default capabilities",
+  "windows": ["main"],
+  "permissions": [
+    "core:default",
+    "dialog:default",
+    "fs:default",
+    {
+      "identifier": "fs:allow-write",
+      "allow": [{ "path": "$DESKTOP/*" }, { "path": "$DOCUMENT/*" }]
+    },
+    {
+      "identifier": "fs:allow-read",
+      "allow": [{ "path": "$DESKTOP/*" }, { "path": "$DOCUMENT/*" }]
+    }
+  ]
+}
